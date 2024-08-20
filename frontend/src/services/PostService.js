@@ -12,7 +12,6 @@ export const getPosts = async () => {
 }
 
 export const createPost = async (post) => {
-    console.log('post', post)
     try {
         const response = await axios.post(API_URL, post, {
             headers: {
@@ -26,7 +25,6 @@ export const createPost = async (post) => {
 };
 
 export const updatePost = async (id, post) => {
-    console.log('update post', id, post)
     const response = await axios.put(`${API_URL}${id}/`, post);
     return response.data;
 };
